@@ -1,5 +1,5 @@
 #  ask the user to input their experiance by asking them a question using the input() function
-'''http://www.w3schools.com/python/ref_func_input.asp'''
+"""http://www.w3schools.com/python/ref_func_input.asp"""
 
 #  use an if/elif/else statement to check to see if the user chose option 1,2,3, or 4
 """http://www.w3schools.com/python/python_conditions.asp"""
@@ -13,6 +13,60 @@ user_full_name = False
 user_state = False
 user_country = False
 user_number_of_education_years = False
+expected_salaries = {"NY": 70000, "CA": 70000, "FL": 50000, "NC": 50000, "TX": 60000}
+
+print("Welcome candidate! Please enter in your information.")
+while True:
+    try:
+        if not user_dob_old:
+            user_dob_old = input("Enter Date of Birth (MM/DD/YYYY):")
+        if not user_age:
+            user_age = int(input("Enter Current Age:"))
+        if not user_full_name:
+            user_full_name = input("Enter Full Name:")
+        valid_state = list(expected_salaries.keys())
+        for state in valid_state:
+            print(state)
+        if not user_state:
+            user_state = input('Enter State (Please enter the 2 letter abbreviation:)')
+        if user_state not in valid_state:
+            raise KeyError()
+        if not user_country:
+            user_country = input("Enter Country:")
+        is_active = True
+        if not user_number_of_education_years:
+            user_number_of_education_years = int(input("Enter the number of years you've been learning code."))
+            print()
+        break
+    except ValueError:
+        print("Please answer all questions.")
+    except KeyError:
+        user_state = False
+        print("Please enter valid State.")
+
+datetimeobject = datetime.strptime(user_dob_old, '%m/%d/%Y')
+user_dob = datetimeobject.strftime('%B %d, %Y')
+
+user_info = {"DOB": user_dob, "Age": user_age, "Full Name": user_full_name, "Country": user_country, "State":
+        user_state, "is_active": id(is_active), "Years of Education": user_number_of_education_years}
+
+users_experience = input(
+    "How many years of experience do you have developing software?\n[1] Less than 1 year experience.\n"
+    "[2] 1-3 years of experience.\n[3] 3-8 years of experience.\n[4]"
+    "8+ years of experience.\n")
+
+users_experience = int(users_experience)
+print()
+
+user_coding_languages: str = input("Which Coding Languages do you know? (Separate each language by commas)\n")
+print()
+print("Before split():" + user_coding_languages)
+user_coding_languages = user_coding_languages.split(",")
+print("After split():" + str(user_coding_languages))
+print()
+
+expected_salary = 0
+new_expected_salary = 0
 
 
 def calculate_expected_salary(number_of_edu_years, user_information, years_of_experience):
@@ -47,60 +101,6 @@ def calculate_expected_salary(number_of_edu_years, user_information, years_of_ex
         print()
     return new_expected_salary
 
-
-while True:
-    try:
-        if not user_dob_old:
-            user_dob_old = input("Enter Date of Birth (MM/DD/YYYY):")
-        if not user_age:
-            user_age = int(input("Enter Current Age:"))
-        if not user_full_name:
-            user_full_name = input("Enter Full Name:")
-        valid_state = ("CA", "NY", "FL", "NC", "TX")
-        for state in valid_state:
-            print(state)
-        if not user_state:
-            user_state = input('Enter State (Please enter the 2 letter abbreviation:)')
-        if user_state not in valid_state:
-            raise KeyError()
-        if not user_country:
-            user_country = input("Enter Country:")
-        is_active = True
-        if not user_number_of_education_years:
-            user_number_of_education_years = int(input("Enter the number of years you've been learning code."))
-            print()
-        break
-    except ValueError:
-        print("Please answer all questions.")
-    except KeyError:
-        user_state = False
-        print("Please enter valid State.")
-
-datetimeobject = datetime.strptime(user_dob_old, '%m/%d/%Y')
-user_dob = datetimeobject.strftime('%B %d, %Y')
-
-user_info = {"DOB": user_dob, "Age": user_age, "Full Name": user_full_name, "Country": user_country, "State":
-    user_state, "is_active": id(is_active), "Years of Education": user_number_of_education_years}
-
-expected_salaries = {"NY": 70000, "CA": 70000, "FL": 50000, "NC": 50000, "TX": 60000}
-
-users_experience = input(
-    "How many years of experience do you have developing software?\n[1] Less than 1 year experience.\n"
-    "[2] 1-3 years of experience.\n[3] 3-8 years of experience.\n[4]"
-    "8+ years of experience.\n")
-
-users_experience = int(users_experience)
-print()
-
-user_coding_languages: str = input("Which Coding Languages do you know? (Separate each language by commas)\n")
-print()
-print("Before split():" + user_coding_languages)
-user_coding_languages = user_coding_languages.split(",")
-print("After split():" + str(user_coding_languages))
-print()
-
-expected_salary = 0
-new_expected_salary = 0
 
 new_expected_salary = calculate_expected_salary(user_number_of_education_years, user_age, users_experience)
 
@@ -161,7 +161,8 @@ for item in expected_salaries:
         break
 
     if input("Do you want to enter another another candidate? ").upper == "Y":
-        loop_val = True
+        loop_val = False
     else:
+        loop_val = True
         print(user_info)
         print()

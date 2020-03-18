@@ -1,16 +1,11 @@
-#  ask the user to input their experiance by asking them a question using the input() function
-'''http://www.w3schools.com/python/ref_func_input.asp'''
-
-#  use an if/elif/else statement to check to see if the user chose option 1,2,3, or 4
-"""http://www.w3schools.com/python/python_conditions.asp"""
-
-# homework - else enter a default message if the user does not choose a valid option
 from datetime import datetime
 
 expected_salaries = {"NY": 70000, "CA": 70000, "FL": 50000, "NC": 50000, "TX": 60000}
-
+info_captured = False
 
 def capture_user_info():
+    global info_captured
+
     user_dob_old = False
     user_age = False
     user_full_name = False
@@ -18,8 +13,6 @@ def capture_user_info():
     user_country = False
     user_number_of_education_years = False
 
-    # Hynson: added a new variable to determine if we've captured all the info.
-    info_captured = False
     user_info = None
     print("Welcome candidate! Please enter in your information.")
 
@@ -149,6 +142,40 @@ def calculate_expected_salary(user_coding_languages, user_information, candidate
     return new_expected_salary
 
 
+# Determine whether or not to prompt for the questionnaire
+should_ask_questions = True
+
+while should_ask_questions:
+    # 1. capture user inform through questionnaire, create a new function, call fn and assign to a variable
+    candidate_info = capture_user_info()
+
+    # 1b. get user experience
+    candidate_exp = capture_user_experience()
+
+    # 1c. get number of coding languages
+    user_coding_languages = capture_user_coding_languages()
+
+    # 2. process information to calculate salary
+    print(user_coding_languages)
+    print(candidate_info)
+    print(candidate_exp)
+
+    expected_salary = calculate_expected_salary(user_coding_languages, candidate_info, candidate_exp)
+
+    # 3. display salary
+    # print("Hey your expected salary is XYZ")
+    # 4. if add another user, then rerun questionnaire
+    print("Do you add another candidate")
+    add_another = input("Add another?")
+
+    if add_another.upper() == "Y":
+        should_ask_questions = True
+
+    # else : print all fo user info
+    else:
+        should_ask_questions = False
+        # print(candidate_info)
+
 if candidate_exp == 1:
     if len(user_coding_languages) < 2:
         new_expected_salary = new_expected_salary - 10000
@@ -199,37 +226,10 @@ if len(user_coding_languages) == 5:
 print("Expect $" + str(new_expected_salary) + " for your level of experience.")
 print()
 
-# Determine whether or not to prompt for the questionnaire
-should_ask_questions = True
 
-while should_ask_questions:
-    # 1. capture user inform through questionnaire, create a new function, call fn and assign to a variable
-    candidate_info = capture_user_info()
+def user_state(valid_state):
+    pass
 
-    # 1b. get user experience
-    candidate_exp = capture_user_experience()
-
-    # 1c. get number of coding languages
-    user_coding_languages = capture_user_coding_languages()
-
-    # 2. process information to calculate salary
-    print(user_coding_languages)
-    print(candidate_info)
-    print(candidate_exp)
-
-    expected_salary = calculate_expected_salary(user_coding_languages, candidate_info, candidate_exp)
-
-    # 4. if add another user, then rerun questionnaire
-    print("Do you add another candidate")
-    add_another = input("Add another?")
-
-    if add_another.upper() == "Y":
-        should_ask_questions = True
-
-    # else : print all fo user info
-    else:
-        should_ask_questions = False
-        # print(candidate_info)
 
 for item in expected_salaries:
     if capture_user_info()["State"] == item in expected_salaries:
