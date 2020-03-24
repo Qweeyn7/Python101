@@ -6,7 +6,7 @@
 
 # homework - else enter a default message if the user does not choose a valid option
 from datetime import datetime
-
+from Lesson6 import Lesson6
 user_dob_old = False
 user_age = False
 user_full_name = False
@@ -14,8 +14,10 @@ user_state = False
 user_country = False
 user_number_of_education_years = False
 expected_salaries = {"NY": 70000, "CA": 70000, "FL": 50000, "NC": 50000, "TX": 60000}
+user_info = True
 
 print("Welcome candidate! Please enter in your information.")
+
 while True:
     try:
         if not user_dob_old:
@@ -38,6 +40,7 @@ while True:
             user_number_of_education_years = int(input("Enter the number of years you've been learning code."))
             print()
         break
+
     except ValueError:
         print("Please answer all questions.")
     except KeyError:
@@ -46,9 +49,11 @@ while True:
 
 datetimeobject = datetime.strptime(user_dob_old, '%m/%d/%Y')
 user_dob = datetimeobject.strftime('%B %d, %Y')
+user_profile = Lesson6(user_dob, user_age, user_full_name, user_country, user_state, user_number_of_education_years)
 
-user_info = {"DOB": user_dob, "Age": user_age, "Full Name": user_full_name, "Country": user_country, "State":
-        user_state, "is_active": id(is_active), "Years of Education": user_number_of_education_years}
+user_info = {'DOB': user_profile.user_dob, "Age": user_profile.user_age, "Full Name": user_profile.user_full_name,
+             "Country": user_profile.user_country, "State": user_profile.user_state, "is_active": id(is_active),
+             "Years of Education": user_profile.user_number_of_education_years}
 
 users_experience = input(
     "How many years of experience do you have developing software?\n[1] Less than 1 year experience.\n"
@@ -69,6 +74,7 @@ expected_salary = 0
 new_expected_salary = 0
 
 
+
 def calculate_expected_salary(number_of_edu_years, user_information, years_of_experience):
     if isinstance(user_information, dict):
         print("This is valid.")
@@ -77,22 +83,22 @@ def calculate_expected_salary(number_of_edu_years, user_information, years_of_ex
         print()
 
     if int(users_experience) == 1:
-        expected_salary = expected_salaries[user_info["State"]]
+        expected_salary = expected_salaries[user_state]
         new_expected_salary = expected_salary - 5000
         print("Unfortunately with your limited experience we will have to deduct $5k from your base salary.")
         print()
     elif int(users_experience) == 2:
-        expected_salary = expected_salaries[user_info["State"]]
+        expected_salary = expected_salaries[user_state]
         new_expected_salary = expected_salary + 2000
         print("With your level of experience expect a $2k bump in your base salary.")
         print()
     elif int(users_experience) == 3:
-        expected_salary = expected_salaries[user_info["State"]]
+        expected_salary = expected_salaries[user_state]
         new_expected_salary = expected_salary + 5000
         print("Exactly what we are looking for! Expect a $5K added to your base salary.")
         print()
     elif int(users_experience) == 4:
-        expected_salary = expected_salaries[user_info["State"]]
+        expected_salary = expected_salaries[user_state]
         new_expected_salary = expected_salary + 10000
         print(
             "We're giving you an additional $10k increase to your base salary for the many years of experience you "
@@ -155,14 +161,16 @@ print("Expect $" + str(new_expected_salary) + " for your level of experience.")
 print()
 
 for item in expected_salaries:
-    if user_info["State"] == item in expected_salaries:
+    if user_state == item in expected_salaries:
         print("You’re base expected salary for just living in " + str(user_state) + " could have been $" + str(
             expected_salaries[item]) + ".")
+        print()
         break
 
-    if input("Do you want to enter another another candidate? ").upper == "Y":
-        loop_val = False
-    else:
+    if input("Would you like to enter another another candidate?") == "Y":
+        print()
         loop_val = True
+    else:
+        loop_val = False
         print(user_info)
         print()
