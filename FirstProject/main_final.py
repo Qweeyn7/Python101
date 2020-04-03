@@ -12,8 +12,8 @@
 
 # else if the user chose option 4, print out "Expect at least $130,000 for your level of experience"
 
-
 # homework - else enter a default message if the user does not choose a valid option
+
 while True:
     try:
         user_dob = input("Enter Date of Birth (MM/DD/YYYY):")
