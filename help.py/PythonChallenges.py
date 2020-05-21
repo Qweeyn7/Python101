@@ -80,19 +80,27 @@ def caculate_profit(product):
   total_product_profit = product_profit * product.get("inventory")
   return total_product_profit
 
-product_1_profit = caculate_profit(product_1)
-print("$", product_1_profit, "Product 1 total profit")
+profit_for_product_1 = caculate_profit(product_1)
+print("$", profit_for_product_1, "Product 1 Total profit")
 print()
 
-product_2_profit = caculate_profit(product_2)
-print("$", product_2_profit, "Product 2 total profit")
+profit_for_product_2 = caculate_profit(product_2)
+print("$", profit_for_product_2, "Product 2 total profit")
 print()
 
-product_3_profit = caculate_profit(product_3)
-print("$", product_3_profit, "Product 3 total profit")
+profit_for_product_3 = caculate_profit(product_3)
+print("$", profit_for_product_3, "Product 3 total profit")
 print()
 
-total_profit = product_1_profit + product_2_profit + product_3_profit
+total_profit = profit_for_product_1 + profit_for_product_2 + profit_for_product_3
 print("$", total_profit, "is the total profit from all inventory")
+print()
+
+
+#Challenge 5
+Original_string = "Ebonee Gilford"
+print(Original_string)
+Reversed_string =' ' .join(Original_string.split()[::-1])
+print(Reversed_string)
 
 

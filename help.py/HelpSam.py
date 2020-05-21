@@ -16,4 +16,4 @@ class Student(Person):
         print( "Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear )
 
 x = Student("Mike", "Olsen")
-x.printname()
+x.prin

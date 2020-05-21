@@ -32,8 +32,9 @@ def calculate_expected_salary_from_user_experience(user_information, user_exp):
         A function for calculating the expected salary based on the user's state
         and their years of experience.
     """
+
     # Get the user's state from the incoming user_information object
-    state = user_information["state"]
+    state = user_information.user_state
 
     # Set the base salary, based on the user's state
     base_salary = expected_salaries[state]
@@ -239,3 +240,6 @@ while should_ask_for_info:
     except KeyError:
         user_state = False
         print("Please enter valid State.")
+
+    #except TypeError:
+    #user_profile = False
