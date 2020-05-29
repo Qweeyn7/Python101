@@ -3,6 +3,7 @@ from datetime import datetime
 from UserProfile import UserProfile
 
 print("Welcome candidate! Please enter in your information.")
+print()
 
 # Initialize the variables for the items that we will ask for the user to input.
 #   They will default to False (or it could be None).
@@ -29,8 +30,8 @@ should_ask_for_info = True
 
 def calculate_expected_salary_from_user_experience(user_information, user_exp):
     """
-        A function for calculating the expected salary based on the user's state
-        and their years of experience.
+        A function for calculating the expected salary based on the user's
+      state, and   their years of experience.
     """
 
     # Get the user's state from the incoming user_information object
@@ -74,7 +75,7 @@ def calculate_expected_salary_from_user_experience(user_information, user_exp):
 
 def calculate_expected_salary_from_coding_experience(current_salary, user_languages, user_experience):
     """
-        Re-calculate the salary, based off the user experience and the number of languages they know.
+        Re-calculate the salary, based off the user experience, and the number of languages they know.
     """
     new_expected_salary = current_salary
     if int(user_experience) == 1:
@@ -109,7 +110,8 @@ def calculate_expected_salary_from_coding_experience(current_salary, user_langua
     if len(user_languages) == 4:
         new_expected_salary = new_expected_salary + 9000
         print(
-            "Perfect! You are a model candidate for the position, we can negotiate a $9k bump in you annual salary after "
+            "Perfect! You are a model candidate for the position, we can negotiate a $9k bump in you annual salary "
+            "after "
             "for the amount of Coding Languages you know. ")
         print()
     if int(user_experience) == 4:
@@ -126,6 +128,7 @@ def calculate_expected_salary_from_coding_experience(current_salary, user_langua
         print()
 
     return new_expected_salary
+
 
 # Now, ask for a user's information as long as should_ask_for_info is True.
 while should_ask_for_info:
@@ -166,7 +169,7 @@ while should_ask_for_info:
         print()
         new_password = input("Please enter a new password.")
         user_profile.set_password(new_password)
-        print("Your new password is",new_password)
+        print("Your new password is", new_password)
         user_password = user_profile.get_password()
         user_Id = user_profile.create_user_Id()
         print("Your unique Account Id is", user_Id)
@@ -232,7 +235,7 @@ while should_ask_for_info:
                         user_state) + " could have been $" + str(
                         expected_salaries[item]) + ".")
                     print()
-                    print( "Thank you for your input, we will contact you soon." )
+                    print("Thank you for your input, we will contact you soon.")
 
     except ValueError:
         print("Please answer all questions.")
@@ -241,5 +244,5 @@ while should_ask_for_info:
         user_state = False
         print("Please enter valid State.")
 
-    #except TypeError:
-    #user_profile = False
+    # except TypeError:
+    # user_profile = False
