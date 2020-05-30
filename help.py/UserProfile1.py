@@ -9,7 +9,7 @@ user_info = {"DOB": user_dob, "Age": user_age, "Full Name": user_full_name, "Cou
 class UserProfile:
     def __init__(self, user_dob, user_age, user_full_name, user_country, user_state, user_number_of_education_years):
         self.password = "A password has been created for you."
-        self.email = None
+        self.email = "Email Field Empty."
         self.is_active = None
         self.user_dob = user_dob
         self.user_age = user_age
@@ -23,6 +23,12 @@ class UserProfile:
 
     def set_password(self, new_password):
         self.password = new_password
+
+    def get_email(self):
+        return self.email
+
+    def set_email(self, user_email):
+        self.email = user_email
 
     def get_age(self):
         return self.age

@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from UserProfile import UserProfile, Developer, Designer
+from UserProfile1 import UserProfile, Developer, Designer
 
 print("Welcome candidate! Please enter in your information.")
 print()
@@ -37,7 +37,7 @@ def calculate_expected_salary_from_user_experience(user_information, user_coding
   """
 
     # Get the user's state from the incoming user_information object
-    state = user_information["state"]
+    state = user_information["State"]
 
     # Set the base salary, based on the user's state
     base_salary = expected_salaries[state]
@@ -240,7 +240,8 @@ while should_ask_for_info:
         # Ask "Are you a Designer or Developer?"
         candidate_type = input("What would best describe your coding background? \n Type [1]"
                                "For Software Developer \n "
-                               "Type [2]For Web Designer \n")
+                               "Type [2]For Web Designer ")
+        print()
 
         if int(candidate_type) == 1:
             candidate_developer = True
@@ -253,31 +254,31 @@ while should_ask_for_info:
 
         # Ask the user for various forms for information.
         if not user_full_name:
-            user_full_name = input("Enter Full Name:")
+            user_full_name = input("Enter Full Name: ")
         if not user_dob_old:
-            user_dob_old = input("Enter Date of Birth (MM/DD/YYYY):")
+            user_dob_old = input("Enter Date of Birth (MM/DD/YYYY): ")
 
             # Convert the date of birth into a different format.
             dob_timestamp = datetime.strptime(user_dob_old, '%m/%d/%Y')
             user_dob = dob_timestamp.strftime('%B %d, %Y')
 
         if not user_age:
-            user_age = int(input("Enter Current Age:"))
+            user_age = int(input("Enter Current Age: "))
         valid_state = list(expected_salaries.keys())
         for state in valid_state:
             print(state)
         if not user_state:
-            user_state = input('Enter State (Please enter the 2 letter abbreviation:)')
+            user_state = input('Enter State (Please enter the 2 letter abbreviation:) ')
         if user_state not in valid_state:
             raise KeyError()
         if not user_country:
-            user_country = input("Enter Country:")
+            user_country = input("Enter Country: ")
             print()
         if not user_number_of_education_years:
             skills = "Software Development"
             if candidate_designer:
                 skills = "Web Design"
-            user_number_of_education_years = int(input("Enter the number of years you've been learning" + skills + "? ")
+            user_number_of_education_years = int(input("Enter the number of years you've been learning " + skills + "? ")
                                                  )
 
         is_active = True
@@ -308,12 +309,21 @@ while should_ask_for_info:
 
         user_password = user_profile.get_password()
         print(user_password)
-        new_password = input("Please enter a new password.")
+        new_password = input("Please enter a new password ")
         user_profile.set_password(new_password)
         print("Your new password is", new_password)
         user_password = user_profile.get_password()
+        print()
+
+        user_email = user_profile.get_email()
+        print(user_email)
+        user_email = input("Please enter valid Email Address ")
+        user_profile.set_email(user_email)
+        print("Verify Email Address", user_email)
+        user_email = user_profile.get_email()
+
         user_Id = user_profile.create_user_id()
-        print("Your unique Account Id is", user_Id)
+        print("Your Account Id is", user_Id)
         print()
 
         user_info = {
@@ -321,7 +331,7 @@ while should_ask_for_info:
             "Current Age": user_profile.user_age,
             "Full Name": user_profile.user_full_name,
             "Country of Residence": user_profile.user_country,
-            "state": user_profile.user_state,
+            "State": user_profile.user_state,
             "Educational Years": user_profile.user_number_of_education_years
         }
 
@@ -347,6 +357,7 @@ while should_ask_for_info:
         # Ask the user if they would like to add another candidate.
         another_candidate = input("Would you like to enter another another candidate? (Y/N) \n")
         should_ask_for_info = another_candidate.upper() == "Y"
+        print()
 
         # Reset the variables so that we can ask questions again.
         if should_ask_for_info:
@@ -361,7 +372,7 @@ while should_ask_for_info:
             # print("Expect $" + str(expected_salary) + " for your level of experience.")
             # print()
 
-            print(user_profile)
+            print(user_info)
             print()
 
             for item in expected_salaries:
