@@ -28,12 +28,11 @@ user_profile = True
 should_ask_for_info = True
 
 
-def calculate_expected_salary_from_user_experience(user_information, user_coding_languages, user_design_tools,
-                                                   user_experience, number_of_education_years, candidate_developer,
-                                                   candidate_designer):
+def calculate_expected_salary_from_user_experience(user_information, user_trade_tools,
+                                                   user_experience, number_of_education_years, candidate_type_str):
     """
-      A function for calculating the expected salary based on the user's state
-      and their years of experience.
+      A function for calculating the expected salary based on the user's
+      state, and their years of experience.
   """
 
     # Get the user's state from the incoming user_information object
@@ -47,6 +46,7 @@ def calculate_expected_salary_from_user_experience(user_information, user_coding
 
     if isinstance(user_information, dict):
         print("All Fields have been completed.")
+        print()
     else:
         print("This is not a dictionary. It is {}".format(type(user_information)))
         print()
@@ -55,60 +55,48 @@ def calculate_expected_salary_from_user_experience(user_information, user_coding
     if int(user_experience) == 1:
         new_expected_salary = base_salary - 5000
         print("Unfortunately with your limited experience we will have to deduct $5k from your base salary.")
-        print()
     elif int(user_experience) == 2:
         new_expected_salary = base_salary + 2000
-        print("With your level of experience expect a $2k bump in your base salary.")
-        print()
+        print("With your level of experience, expect a $2k bump in your base salary.")
     elif int(user_experience) == 3:
         new_expected_salary = base_salary + 5000
         print("Exactly what we are looking for! Expect a $5K added to your base salary.")
-        print()
     elif int(user_experience) == 4:
         new_expected_salary = base_salary + 10000
         print(
             "We're giving you an additional $10k increase to your base salary for the many years of experience you "
             "have "
             "in this field.")
-        print()
 
     candidate_developer = False
     candidate_designer = False
 
-    if candidate_developer:
+    candidate_type_wording_map = {
+        "developer": "coding languages",
+        "designer": "design programs"
+    }
 
-        if len(user_coding_languages) < 3:
-            new_expected_salary = new_expected_salary - 10000
-            print("Learn more coding languages: $10K was deducted from the expected salary")
-        elif len(user_coding_languages) > 3:
-            new_expected_salary = new_expected_salary + 10000
-            print("Learning more than 3 languages added $10K to expected salary")
-        else:
-            new_expected_salary = new_expected_salary + 5000
-            print("Knowing 3 languages or less only added $5K to expected salary")
+    candidate_type_wording = candidate_type_wording_map[candidate_type_str]
 
-    if candidate_designer:
-
-        if len(user_design_tools) < 3:
-            new_expected_salary = new_expected_salary - 10000
-            print("Learn some more design programs: $10K was deducted from the expected salary.")
-        elif len(user_design_tools) > 3:
-            new_expected_salary = new_expected_salary + 10000
-            print("Learning more than 3 design programs added $10K to your expected salary")
-        else:
-            new_expected_salary = new_expected_salary + 5000
-            print("Knowing 3 design programs or less only added $5K to your expected salary")
-
+    if len(user_trade_tools) < 3:
+        new_expected_salary = new_expected_salary - 7500
+        print("Learn more " + candidate_type_wording + ": $7.5K was deducted from the expected salary.")
+    elif len(user_coding_languages) > 3:
+        new_expected_salary = new_expected_salary + 10000
+        print("Learning more than 3 " + candidate_type_wording + " added $10K to expected salary.")
+    else:
+        new_expected_salary = new_expected_salary + 5000
+        print("Knowing 3 " + candidate_type_wording + " or less only added $5K to expected salary.")
     if int(number_of_education_years) > 3:
         new_expected_salary = new_expected_salary + 10000
-        print("Dedication to learning added $10,000 to base salary ")
+        print("Dedication to learning added $10K to base salary ")
+    elif int(number_of_education_years) < 3:
+        new_expected_salary = new_expected_salary - 7500
+        print("Number for years of education needs improvement: Deduct $7.5K from base salary.")
     else:
-        new_expected_salary = new_expected_salary - 5000
-        print("Continue learning to increase salary: Deduct $5K from the expected salary ")
-        print()
-
-
-    print("Expect $" + str(new_expected_salary) + " for your level of experience.")
+        new_expected_salary = new_expected_salary - 2000
+        print("Continue learning to increase salary: added $2K to expected salary.")
+    print("Expect around $" + str(new_expected_salary) + " annually for this position.")
     print()
     return new_expected_salary
 
@@ -116,19 +104,17 @@ def calculate_expected_salary_from_user_experience(user_information, user_coding
 current_salary = 0
 
 
-def calculate_expected_salary_from_coding_experience(current_salary, user_languages, user_experience):
+def calculate_expected_salary_from_coding_experience(current_salary, user_languages, user_experience, user_trade_tools):
     # Re-calculate the salary, based off the user experience, and the number of languages they know.
     new_expected_salary = current_salary
     if int(user_experience) == 1:
         if len(user_languages) < 2:
             new_expected_salary = new_expected_salary - 10000
             print("Learn more Coding Languages: Deduct $10k from expected salary.")
-            print()
         elif len(user_languages) == 2:
             new_expected_salary = new_expected_salary + 5000
         else:
             new_expected_salary = new_expected_salary + 2500
-            print()
     if int(user_experience) == 2:
         if len(user_languages) == 2:
             new_expected_salary = new_expected_salary - 5000
@@ -139,7 +125,6 @@ def calculate_expected_salary_from_coding_experience(current_salary, user_langua
     if len(user_languages) == 3:
         new_expected_salary = new_expected_salary + 7000
         print("Great! We can add a minimum of $7k to your annual salary for the amount of Coding Languages you know.")
-        print()
     if int(user_experience) == 3:
         if len(user_languages) < 3:
             new_expected_salary = new_expected_salary - 5000
@@ -147,14 +132,12 @@ def calculate_expected_salary_from_coding_experience(current_salary, user_langua
             new_expected_salary = new_expected_salary + 9000
         else:
             new_expected_salary = new_expected_salary + 6500
-
     if len(user_languages) == 4:
         new_expected_salary = new_expected_salary + 9000
         print(
             "Perfect! You are a model candidate for the position, we can negotiate a $9k bump in you annual salary "
             "after "
             "for the amount of Coding Languages you know.")
-        print()
     if int(user_experience) == 4:
         if len(user_languages) == 4:
             new_expected_salary = new_expected_salary + 9000
@@ -166,67 +149,54 @@ def calculate_expected_salary_from_coding_experience(current_salary, user_langua
         new_expected_salary = new_expected_salary + 11000
         print(
             "With your proficiency with multiple Coding Languages, we can negotiate a $11k bump in your annual salary.")
-        print()
-
     else:
         candidate_designer = True
         new_expected_salary = current_salary
 
     if int(user_experience) == 1:
-        if len(software_toolbox) < 2:
+        if len(user_trade_tools) < 2:
             new_expected_salary = new_expected_salary - 10000
             print("Learn more Coding Languages: Deduct $10k from expected salary.")
-            print()
-        elif len(software_toolbox) == 2:
+        elif len(user_trade_tools) == 2:
             new_expected_salary = new_expected_salary + 5000
         else:
             new_expected_salary = new_expected_salary + 2500
-            print()
-
         if int(user_experience) == 2:
-            if len(software_toolbox) == 2:
+            if len(user_trade_tools) == 2:
                 new_expected_salary = new_expected_salary - 5000
-            elif len(software_toolbox) == 3:
+            elif len(user_trade_tools) == 3:
                 new_expected_salary = new_expected_salary + 7000
             else:
                 new_expected_salary = new_expected_salary + 4500
-
-        if len(software_toolbox) == 3:
+        if len(user_trade_tools) == 3:
             new_expected_salary = new_expected_salary + 7000
             print(
                 "Great! We can add a minimum of $7k to your annual salary for the amount of Coding Languages you know.")
-            print()
-
         if int(user_experience) == 3:
-            if len(software_toolbox) < 3:
+            if len(user_trade_tools) < 3:
                 new_expected_salary = new_expected_salary - 5000
             elif len(user_coding_languages) == 4:
                 new_expected_salary = new_expected_salary + 9000
             else:
                 new_expected_salary = new_expected_salary + 6500
-
-        if len(software_toolbox) == 4:
+        if len(user_trade_tools) == 4:
             new_expected_salary = new_expected_salary + 9000
             print(
                 "Perfect! You are a model candidate for the position, we can negotiate a $9k bump in you annual "
                 "salary after "
                 "for the amount of Coding Languages you know. ")
-            print()
-
         if int(user_experience) == 4:
-            if len(software_toolbox) == 4:
+            if len(user_trade_tools) == 4:
                 new_expected_salary = new_expected_salary + 9000
-            elif len(software_toolbox) == 5:
+            elif len(user_trade_tools) == 5:
                 new_expected_salary = new_expected_salary + 11000
             else:
                 new_expected_salary = new_expected_salary + 8500
-
-        if len(software_toolbox) == 5:
+        if len(user_trade_tools) == 5:
             new_expected_salary = new_expected_salary + 11000
             print(
                 "With your proficiency with multiple Coding Languages, we can negotiate a $11k bump in your annual "
                 "salary.")
-            print()
 
     return new_expected_salary
 
@@ -242,6 +212,13 @@ while should_ask_for_info:
                                "For Software Developer \n "
                                "Type [2]For Web Designer ")
         print()
+
+        candidate_type_map = {
+            "1": "developer",
+            "2": "designer"
+        }
+
+        candidate_type_str = candidate_type_map[candidate_type]
 
         if int(candidate_type) == 1:
             candidate_developer = True
@@ -278,13 +255,17 @@ while should_ask_for_info:
             skills = "Software Development"
             if candidate_designer:
                 skills = "Web Design"
-            user_number_of_education_years = int(input("Enter the number of years you've been learning " + skills + "? ")
-                                                 )
+            user_number_of_education_years = int(
+                input("Enter the number of years you've been learning " + skills + "? ")
+                )
 
         is_active = True
 
         user_profile = UserProfile(user_dob, user_age, user_full_name, user_country, user_state,
                                    user_number_of_education_years)
+
+        user_trade_tools = []
+
         # Create a user profile from the info provided, using the UserProfile class.
         if candidate_developer:
             user_design_tools = []
@@ -292,17 +273,18 @@ while should_ask_for_info:
                 input("Which Coding Languages do you know? (Separate each language by a comma)\n"))
             print()
 
-            user_coding_languages = user_coding_languages.split(",")
+            user_trade_tools = user_coding_languages.split(",")
             user_profile = Developer(user_dob, user_age, user_full_name, user_country, user_state,
-                                     user_number_of_education_years, user_coding_languages)
+                                     user_number_of_education_years, user_trade_tools)
         else:
             user_coding_languages = []
             user_design_tools = str(input("What Software Design Tools do you use? (Separate each tool by a comma)"))
             print()
 
-            software_toolbox = user_design_tools.split(",")
             user_profile = Designer(user_dob, user_age, user_full_name, user_country, user_state,
-                                    user_number_of_education_years, user_design_tools)
+                                    user_number_of_education_years, user_trade_tools)
+
+            user_trade_tools = user_design_tools.split(",")
 
             if user_design_tools == '':
                 raise ValueError
@@ -344,11 +326,10 @@ while should_ask_for_info:
         print()
 
         # Calculate the expected salary based on the user's state and their experience.
-        expected_salary = calculate_expected_salary_from_user_experience(user_info, user_coding_languages,
-                                                                         user_design_tools,
+        expected_salary = calculate_expected_salary_from_user_experience(user_info, user_trade_tools,
                                                                          users_experience,
                                                                          user_number_of_education_years,
-                                                                         candidate_designer, candidate_developer)
+                                                                         candidate_type_str)
 
         # Re-calculate the expected salary based on the user's coding experience and languages. expected_salary =
         # calculate_expected_salary_from_coding_experience(expected_salary, user_coding_languages, users_experience,

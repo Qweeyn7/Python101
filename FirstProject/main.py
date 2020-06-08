@@ -7,7 +7,7 @@ print()
 
 # Initialize the variables for the items that we will ask for the user to input.
 #   They will default to False (or it could be None).
-#   If the variable is not set, then we'll ask them to enter in that information.
+#   If the variable is not set, then we'll ask them to enter that information.
 user_dob_old = False
 user_age = False
 user_full_name = False
@@ -166,13 +166,21 @@ while should_ask_for_info:
 
         user_password = user_profile.get_password()
         print(user_password)
-        print()
-        new_password = input("Please enter a new password.")
+        new_password = input("Please enter a new password ")
         user_profile.set_password(new_password)
         print("Your new password is", new_password)
         user_password = user_profile.get_password()
-        user_Id = user_profile.create_user_Id()
-        print("Your unique Account Id is", user_Id)
+        print()
+
+        user_email = user_profile.get_email()
+        print(user_email)
+        user_email = input("Please enter valid Email Address ")
+        user_profile.set_email(user_email)
+        print("Verify Email Address", user_email)
+        user_email = user_profile.get_email()
+
+        user_Id = user_profile.create_user_id()
+        print("Your Account Id is", user_Id)
         print()
 
         user_info = {
@@ -244,5 +252,3 @@ while should_ask_for_info:
         user_state = False
         print("Please enter valid State.")
 
-    # except TypeError:
-    # user_profile = False
