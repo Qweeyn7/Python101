@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SalaryApI.iml" filepath="$PROJECT_DIR$/.idea/SalaryApI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../help.py/.idea/help.py.iml" filepath="$PROJECT_DIR$/../help.py/.idea/help.py.iml" />
     </modules>
   </component>
 </project>

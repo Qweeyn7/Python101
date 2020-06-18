@@ -1,4 +1,4 @@
-
+"""
 from asciimatics.effects import Cycle, Stars
 from asciimatics.renderers import FigletText
 from asciimatics.scene import Scene
@@ -21,6 +21,15 @@ def demo(screen):
 
 
 Screen.wrapper(demo)
-
+"""
 #Father's Day Card has multiple errors.
+
+import speech_recognition as sr
+
+r = sr.Recognizer()
+with sr.Microphone() as source:
+    print("Speak Now: ")
+    audio = r.listen(source)
+print(r.recognize_google(audio))
+
 

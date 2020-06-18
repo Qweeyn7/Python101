@@ -2,6 +2,7 @@ from flask import Flask  # import Flask
 from flask import render_template
 from flask import request
 
+from calculate_api.UserProfile import UserProfile, Developer, Designer
 from calculate_api.utilities import calculator
 
 app = Flask(__name__)  # activate the Flask application/ instantiate the Flask object
@@ -25,15 +26,23 @@ def candidate_form():
 def calculate_salary():
     if request.method == "POST":
         candidate_type = request.form["profession"]
+
         number_of_exp_years = int(request.form["experience"])
+
         user_coding_languages = request.form['languages']
         user_trade_tools = user_coding_languages.split(",")
+
         user_design_tools = request.form['designTools']
         user_trade_tools = user_design_tools.split(",")
+
         dob = request.form['dob']
-        fullName = request.form['fullName']
+
+        full_name = request.form['fullName']
+
         age = int(request.form['age'])
+
         country = request.form['country']
+
         state = request.form['state']
         number_of_education_years = int(request.form['educationYears'])
 
@@ -49,21 +58,17 @@ def calculate_salary():
     else:
         return "OK"
 
-    user_profile = candidate_developer(dob, age, fullName, country, state,
-                                       number_of_education_years, user_trade_tools)
+    user_profile = UserProfile(dob, age, full_name, country, state,
+                               number_of_education_years)
 
-    user_profile = candidate_designer(dob, age, fullName, country, state,
-                                      number_of_education_years, user_trade_tools)
+    user_profile = Developer(dob, age, full_name, country, state,
+                             number_of_education_years, user_trade_tools)
 
-    candidate_type_map = {
-        "1": "developer",
-        "2": "designer"
-    }
-
-    candidate_type_str = candidate_type_map[candidate_type]
+    user_profile = Designer(dob, age, full_name, country, state,
+                            number_of_education_years, user_trade_tools)
 
     calculator.expected_salary = calculator.calculate_expected_salary_from_user_experience(user_profile,
                                                                                            user_trade_tools,
                                                                                            number_of_exp_years,
                                                                                            number_of_education_years,
-                                                                                           candidate_type_str)
+                                                                                           candidate_type)

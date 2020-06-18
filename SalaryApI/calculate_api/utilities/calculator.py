@@ -10,7 +10,7 @@ def calculate_expected_salary_from_user_experience(user_information, user_trade_
   """
 
     # Get the user's state from the incoming user_information object
-    state = user_information["State"]
+    state = user_information['state']
 
     # Set the base salary, based on the user's state
     base_salary = expected_salaries[state]
