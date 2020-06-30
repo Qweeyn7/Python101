@@ -58,9 +58,6 @@ def calculate_salary():
     else:
         return "OK"
 
-    user_profile = UserProfile(dob, age, full_name, country, state,
-                               number_of_education_years)
-
     user_profile = Developer(dob, age, full_name, country, state,
                              number_of_education_years, user_trade_tools)
 

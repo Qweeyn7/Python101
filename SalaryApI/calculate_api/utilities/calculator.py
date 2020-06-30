@@ -1,7 +1,6 @@
 expected_salaries = {"NY": 70000, "CA": 70000, "FL": 50000, "NC": 50000, "TX": 60000}
 expected_salary = 0
 
-
 def calculate_expected_salary_from_user_experience(user_information, user_trade_tools,
                                                    user_experience, number_of_education_years, candidate_type_str):
     """
@@ -10,7 +9,7 @@ def calculate_expected_salary_from_user_experience(user_information, user_trade_
   """
 
     # Get the user's state from the incoming user_information object
-    state = user_information['state']
+    state = user_information.user_state
 
     # Set the base salary, based on the user's state
     base_salary = expected_salaries[state]
