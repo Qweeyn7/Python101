@@ -17,11 +17,16 @@ def calculate_expected_salary_from_user_experience(user_information, user_trade_
     # Initialize a new_expected_salary variable, which is set to the base_salary
     new_expected_salary = base_salary
 
+    # Output message
+    output = ''
+
     if isinstance(user_information, dict):
-        return "All Fields have been completed."
+        #return "All Fields have been completed."
         print()
+        output += "\nAll Fields have been completed."
     else:
-        return "This is not a dictionary. It is {}".format(type(user_information))
+        #return "This is not a dictionary. It is {}".format(type(user_information))
+        output += "This is not a dictionary. It is {}".format(type(user_information))
         print()
 
     # Re-calculate the salary based on the user's experience.
@@ -71,8 +76,8 @@ def calculate_expected_salary_from_user_experience(user_information, user_trade_
         return "Continue learning to increase salary: added $2K to expected salary."
     return "Expect around $" + str(new_expected_salary) + " annually for this position."
     print()
-    return new_expected_salary
-
+    #return new_expected_salary
+    return output
 
 current_salary = 0
 

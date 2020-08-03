@@ -69,3 +69,4 @@ def calculate_salary():
                                                                                            number_of_exp_years,
                                                                                            number_of_education_years,
                                                                                            candidate_type)
+    return calculator.expected_salary

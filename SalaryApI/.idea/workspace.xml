@@ -26,12 +26,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="26e8beb1-e1ac-42ef-b9b0-0da9f3be3de4" name="Default Changelist" comment="Intro to API&#10;Imported UserProfile.py">
-      <change afterPath="$PROJECT_DIR$/calculate_api/select" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../testing2020/Python101.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculate_api/expected_salary_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_api/expected_salary_api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculate_api/utilities/calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_api/utilities/calculator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TicTac/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TicTac/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TicTac/HappyDayCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TicTac/HappyDayCard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testing2020/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../testing2020/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.calculator">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -81,6 +82,27 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="calculator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SalaryApI" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/calculate_api/utilities" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/calculate_api/utilities/calculator.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -112,6 +134,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.calculator" />
         <item itemvalue="Python.expected_salary_api" />
       </list>
     </recent_temporary>
