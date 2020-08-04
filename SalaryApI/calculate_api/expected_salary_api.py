@@ -69,4 +69,10 @@ def calculate_salary():
                                                                                            number_of_exp_years,
                                                                                            number_of_education_years,
                                                                                            candidate_type)
+    print(calculator.expected_salary)
+    print(user_trade_tools)
+    print(number_of_exp_years)
+
+    calculator.expected_salary = calculator.calculate_expected_salary_from_coding_experience(
+                                                                                             user_coding_languages, number_of_exp_years, user_trade_tools)
     return calculator.expected_salary

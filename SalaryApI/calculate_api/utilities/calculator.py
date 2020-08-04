@@ -1,5 +1,6 @@
 expected_salaries = {"NY": 70000, "CA": 70000, "FL": 50000, "NC": 50000, "TX": 60000}
 expected_salary = 0
+new_expected_salary = 0
 
 def calculate_expected_salary_from_user_experience(user_information, user_trade_tools,
                                                    user_experience, number_of_education_years, candidate_type_str):
@@ -21,11 +22,11 @@ def calculate_expected_salary_from_user_experience(user_information, user_trade_
     output = ''
 
     if isinstance(user_information, dict):
-        #return "All Fields have been completed."
+        # return "All Fields have been completed."
         print()
         output += "\nAll Fields have been completed."
     else:
-        #return "This is not a dictionary. It is {}".format(type(user_information))
+        # return "This is not a dictionary. It is {}".format(type(user_information))
         output += "This is not a dictionary. It is {}".format(type(user_information))
         print()
 
@@ -74,17 +75,16 @@ def calculate_expected_salary_from_user_experience(user_information, user_trade_
     else:
         new_expected_salary = new_expected_salary - 2000
         return "Continue learning to increase salary: added $2K to expected salary."
-    return "Expect around $" + str(new_expected_salary) + " annually for this position."
-    print()
-    #return new_expected_salary
+
+        return "Expect around $" + str(new_expected_salary) + " annually for this position."
+        print()
+    # return new_expected_salary
     return output
 
-current_salary = 0
 
-
-def calculate_expected_salary_from_coding_experience(current_salary, user_languages, user_experience, user_trade_tools):
+def calculate_expected_salary_from_coding_experience(user_languages, user_experience, user_trade_tools):
     # Re-calculate the salary, based off the user experience, and the number of languages they know.
-    new_expected_salary = current_salary
+
     if int(user_experience) == 1:
         if len(user_languages) < 2:
             new_expected_salary = new_expected_salary - 10000
@@ -129,7 +129,7 @@ def calculate_expected_salary_from_coding_experience(current_salary, user_langua
             "With your proficiency with multiple Coding Languages, we can negotiate a $11k bump in your annual salary.")
     else:
         candidate_designer = True
-        new_expected_salary = current_salary
+
 
     if int(user_experience) == 1:
         if len(user_trade_tools) < 2:
