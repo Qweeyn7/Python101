@@ -53,6 +53,7 @@ class Designer(UserProfile):
         super().__init__(user_dob, user_age, user_full_name, user_country, user_state,
                          user_number_of_education_years)
         self.software_programs = software_toolbox
+        self.candidate_type = 'designer'
 
     def get_software_programs(self):
         return self.software_programs
@@ -67,6 +68,7 @@ class Developer(UserProfile):
         super().__init__(user_dob, user_age, user_full_name, user_country, user_state,
                          user_number_of_education_years)
         self.coding_languages = coding_toolbox
+        self.candidate_type = 'developer'
 
     def get_coding_languages(self):
         return self.coding_lanuages

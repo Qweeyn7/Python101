@@ -46,33 +46,42 @@ def calculate_salary():
         state = request.form['state']
         number_of_education_years = int(request.form['educationYears'])
 
+        print(request.form)
+
     candidate_developer = False
     candidate_designer = False
+
+    job_type = ''
 
     if int(candidate_type) == 1:
         candidate_developer = True
         candidate_designer = False
+        user_profile = Developer(dob, age, full_name, country, state,
+                                 number_of_education_years, user_trade_tools)
     elif int(candidate_type) == 2:
         candidate_developer = False
         candidate_designer = True
+        user_profile = Designer(dob, age, full_name, country, state,
+                                number_of_education_years, user_trade_tools)
     else:
-        return "OK"
+         user_profile = UserProfile(dob, age, full_name, country, state,
+                                number_of_education_years)
 
-    user_profile = Developer(dob, age, full_name, country, state,
-                             number_of_education_years, user_trade_tools)
+        # return "OK" - mhynson - Not needed for now
 
-    user_profile = Designer(dob, age, full_name, country, state,
-                            number_of_education_years, user_trade_tools)
+
+
+
 
     calculator.expected_salary = calculator.calculate_expected_salary_from_user_experience(user_profile,
                                                                                            user_trade_tools,
                                                                                            number_of_exp_years,
-                                                                                           number_of_education_years,
-                                                                                           candidate_type)
-    print(calculator.expected_salary)
-    print(user_trade_tools)
-    print(number_of_exp_years)
+                                                                                           number_of_education_years)
 
-    calculator.expected_salary = calculator.calculate_expected_salary_from_coding_experience(
+    calculator.expected_salary = calculator.calculate_expected_salary_from_coding_experience(calculator.expected_salary,
                                                                                              user_coding_languages, number_of_exp_years, user_trade_tools)
-    return calculator.expected_salary
+
+    # return calculator.expected_salary
+    print(calculator.expected_salary)
+
+    return render_template('calculate_salary.html', output=calculator.expected_salary)
