@@ -25,12 +25,21 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26e8beb1-e1ac-42ef-b9b0-0da9f3be3de4" name="Default Changelist" comment="Working form&#10;Only calculating user_experience">
+    <list default="true" id="26e8beb1-e1ac-42ef-b9b0-0da9f3be3de4" name="Default Changelist" comment="Working form&#10;Updated with Coach Mike">
+      <change afterPath="$PROJECT_DIR$/../help.py/calculator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SalaryApI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/SalaryApI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculate_api/UserProfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_api/UserProfile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculate_api/expected_salary_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_api/expected_salary_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculate_api/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_api/templates/calculate_salary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculate_api/utilities/calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_api/utilities/calculator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TicTac/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TicTac/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TicTac/HappyDayCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TicTac/HappyDayCard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../help.py/.idea/help.py.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../help.py/.idea/help.py.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../help.py/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../help.py/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../help.py/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../help.py/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../help.py/Lesson8.py" beforeDir="false" afterPath="$PROJECT_DIR$/../help.py/Lesson8.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../testing2020/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../testing2020/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +76,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/venv" />
   </component>
-  <component name="RunManager" selected="Python.calculator">
+  <component name="RunManager" selected="Python.expected_salary_api">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -133,8 +142,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.calculator" />
         <item itemvalue="Python.expected_salary_api" />
+        <item itemvalue="Python.calculator" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596480754147</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Working form&#10;Updated with Coach Mike">
+      <created>1596501966387</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1596501966387</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,7 +239,8 @@
     <MESSAGE value="Intro to API" />
     <MESSAGE value="Intro to API&#10;Imported UserProfile.py" />
     <MESSAGE value="Working form&#10;Only calculating user_experience" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working form&#10;Only calculating user_experience" />
+    <MESSAGE value="Working form&#10;Updated with Coach Mike" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working form&#10;Updated with Coach Mike" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="90" key="#Inspections" timestamp="1592259043890">
@@ -242,46 +259,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1592436516546" />
-    <state width="1515" height="261" key="GridCell.Tab.0.bottom" timestamp="1592446660693">
+    <state width="1515" height="261" key="GridCell.Tab.0.bottom" timestamp="1596924582911">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592446660693" />
-    <state width="1515" height="261" key="GridCell.Tab.0.center" timestamp="1592446660693">
+    <state width="1515" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596924582911" />
+    <state width="1515" height="261" key="GridCell.Tab.0.center" timestamp="1596924582911">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592446660693" />
-    <state width="1515" height="261" key="GridCell.Tab.0.left" timestamp="1592446660693">
+    <state width="1515" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596924582911" />
+    <state width="1515" height="261" key="GridCell.Tab.0.left" timestamp="1596924582911">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592446660693" />
-    <state width="1515" height="261" key="GridCell.Tab.0.right" timestamp="1592446660693">
+    <state width="1515" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596924582911" />
+    <state width="1515" height="261" key="GridCell.Tab.0.right" timestamp="1596924582911">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592446660693" />
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1592446660693">
+    <state width="1515" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596924582911" />
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1596924582911">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592446660693" />
-    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1592446660693">
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596924582911" />
+    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1596924582911">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592446660693" />
-    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1592446660693">
+    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596924582911" />
+    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1596924582911">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592446660693" />
-    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1592446660693">
+    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596924582911" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1596924582911">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592446660693" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1596480798718">
+    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596924582911" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1596501984815">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596480798718" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596501984815" />
     <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596501894684">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1596501894684" />
+    <state x="333" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1596924446352">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="333" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1596924446352" />
     <state x="569" y="200" key="git4idea.merge.GitMergeDialog" timestamp="1592445273148">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
