@@ -47,10 +47,10 @@ def calculate_salary():
 
         # print(request.form)
 
-    candidate_developer = False
-    candidate_designer = False
+    # candidate_developer = False
+    # candidate_designer = False
 
-    job_type = ''
+    # job_type''
 
     if int(candidate_type) == 1:
         candidate_developer = True
