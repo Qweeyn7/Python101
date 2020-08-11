@@ -1,5 +1,5 @@
 expected_salaries = {"NY": 70000, "CA": 70000, "FL": 50000, "NC": 50000, "TX": 60000}
-expected_salary = 0
+# expected_salary = 0
 # new_expected_salary = 0
 
 '''
@@ -29,7 +29,7 @@ def calculate_expected_salary_from_user_experience(user_information, user_trade_
 
     # Output message
     output = {
-        "Salary": expected_salaries[state],
+        # "Salary": user_information.user_state,
         "Reasons": list(),
         "Final Message": "",
     }
@@ -100,7 +100,7 @@ def calculate_expected_salary_from_user_experience(user_information, user_trade_
         output["Reasons"].append \
             ("Number for years of education needs improvement: Deduct $7.5K from base salary.")
     else:
-        new_expected_salary = new_expected_salary - 2000
+        new_expected_salary = new_expected_salary + 2000
         output["Reasons"].append \
             ("Continue learning to increase salary: added $2K to expected salary.")
 
@@ -163,7 +163,7 @@ def calculate_expected_salary_from_coding_experience(current_expected_salary_inf
                 "With your proficiency with multiple Coding Languages, we can negotiate a $11k bump in your annual salary.")
     else:
         candidate_designer = True
-        new_expected_salary = current_expected_salary_info
+        new_expected_salary = new_expected_salary
 
     if int(user_experience) == 1:
         if len(user_trade_tools) < 2:

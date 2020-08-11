@@ -13,15 +13,15 @@ def hello_world():
     return "Hello, Tribe!"
 
 
-@app.route('/')
+@app.route("/")
 def candidate_form():
     """
     :return:
     """
-    return render_template('calculate_salary.html')
+    return render_template("calculate_salary.html")
 
 
-@app.route('/calculate_salary', methods=['POST'])
+@app.route("/calculate_salary", methods=["POST"])
 def calculate_salary():
     if request.method == "POST":
         candidate_type = request.form["profession"]
@@ -81,4 +81,4 @@ def calculate_salary():
     # return calculator.expected_salary
     print(calculator.expected_salary)
 
-    return render_template('calculate_salary.html', output=calculator.expected_salary)
+    return render_template("results.html", output=calculator.expected_salary)
