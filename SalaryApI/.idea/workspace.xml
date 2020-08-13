@@ -25,110 +25,16 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26e8beb1-e1ac-42ef-b9b0-0da9f3be3de4" name="Default Changelist" comment="Form no longer loads in new page&#10;Updated with Coach Mike &amp; reupdate with output by me&#10;Calculation now correct, but Base salary won't show">
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/css/util.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/Linearicons-Free-v1.0.0/icon-font.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-ExtraBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-ExtraLightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/raleway/Raleway-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/images/bg-01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/images/icons/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/images/icons/map-marker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/images/img-01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/result.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/results.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/animate/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/js/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/bootstrap/js/tooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/css-hamburgers/hamburgers.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/css-hamburgers/hamburgers.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/jquery/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/select2/select2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/select2/select2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/select2/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/calculate_api/templates/vendor/select2/select2.min.js" afterDir="false" />
+    <list default="true" id="26e8beb1-e1ac-42ef-b9b0-0da9f3be3de4" name="Default Changelist" comment="Form now loads in new page&#10;Updated with Coach Mike &amp; reupdate with output by me&#10;Calculations now correct in dict., but now adds $4000 to base salary by state. Finally calculation is $74000 why?    Also find out how to implement new form with index.html and other files in template.">
       <change afterPath="$PROJECT_DIR$/../help.py/calculator.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../help.py/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculate_api/expected_salary_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_api/expected_salary_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculate_api/select" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/calculate_api/templates/calculate_salary.html" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_api/templates/calculate_salary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculate_api/templates/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/Linearicons-Free-v1.0.0/WebFont/Linearicons-Free.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_api/templates/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculate_api/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_api/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculate_api/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_api/templates/result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculate_api/templates/results.html" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_api/templates/results.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculate_api/utilities/calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculate_api/utilities/calculator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TicTac/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TicTac/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../TicTac/HappyDayCard.py" beforeDir="false" afterPath="$PROJECT_DIR$/../TicTac/HappyDayCard.py" afterDir="false" />
@@ -328,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597020189225</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Form now loads in new page&#10;Updated with Coach Mike &amp; reupdate with output by me&#10;Calculations now correct in dict., but now adds $4000 to base salary by state. Finally calculation is $74000 why?    Also find out how to implement new form with index.html and other files in template.">
+      <created>1597159294429</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1597159294430</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -363,7 +276,8 @@
     <MESSAGE value="Working form&#10;Updated with Coach Mike" />
     <MESSAGE value="Form no longer loads in new page&#10;Updated with Coach Mike &amp; reupdate with output by me" />
     <MESSAGE value="Form no longer loads in new page&#10;Updated with Coach Mike &amp; reupdate with output by me&#10;Calculation now correct, but Base salary won't show" />
-    <option name="LAST_COMMIT_MESSAGE" value="Form no longer loads in new page&#10;Updated with Coach Mike &amp; reupdate with output by me&#10;Calculation now correct, but Base salary won't show" />
+    <MESSAGE value="Form now loads in new page&#10;Updated with Coach Mike &amp; reupdate with output by me&#10;Calculations now correct in dict., but now adds $4000 to base salary by state. Finally calculation is $74000 why?    Also find out how to implement new form with index.html and other files in template." />
+    <option name="LAST_COMMIT_MESSAGE" value="Form now loads in new page&#10;Updated with Coach Mike &amp; reupdate with output by me&#10;Calculations now correct in dict., but now adds $4000 to base salary by state. Finally calculation is $74000 why?    Also find out how to implement new form with index.html and other files in template." />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="90" key="#Inspections" timestamp="1592259043890">

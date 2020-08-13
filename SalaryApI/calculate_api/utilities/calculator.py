@@ -29,7 +29,7 @@ def calculate_expected_salary_from_user_experience(user_information, user_trade_
 
     # Output message
     output = {
-        # "Salary": user_information.user_state,
+        # "Salary": base_salary,
         "Reasons": list(),
         "Final Message": "",
     }
@@ -214,5 +214,5 @@ def calculate_expected_salary_from_coding_experience(current_expected_salary_inf
                     "With your proficiency with multiple Coding Languages, we can negotiate a $11k bump in your annual "
                     "salary.")
 
-    output["Salary"] = new_expected_salary
+    # output["Salary"] = new_expected_salary
     return output
