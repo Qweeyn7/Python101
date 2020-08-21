@@ -160,7 +160,8 @@ def calculate_expected_salary_from_coding_experience(current_expected_salary_inf
         new_expected_salary = new_expected_salary + 11000
         output["Reasons"].append \
                 (
-                "With your proficiency with multiple Coding Languages, we can negotiate a $11k bump in your annual salary.")
+                "With your proficiency with multiple Coding Languages, we can negotiate a $11k bump in your annual "
+                "salary.")
     else:
         candidate_designer = True
         new_expected_salary = new_expected_salary

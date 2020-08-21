@@ -7,7 +7,6 @@ from calculate_api.utilities import calculator
 
 app = Flask(__name__)  # activate the Flask application/ instantiate the Flask object
 
-
 @app.route('/hello_world')
 def hello_world():
     return "Hello, Tribe!"
@@ -18,10 +17,10 @@ def candidate_form():
     """
     :return:
     """
-    return render_template("calculate_salary.html")
+    return render_template("index.html")
 
 
-@app.route("/calculate_salary", methods=["POST"])
+@app.route("/index", methods=["POST"])
 def calculate_salary():
     if request.method == "POST":
         candidate_type = request.form["profession"]
