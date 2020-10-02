@@ -7,6 +7,7 @@ from calculate_api.utilities import calculator
 
 app = Flask(__name__)  # activate the Flask application/ instantiate the Flask object
 
+
 @app.route('/hello_world')
 def hello_world():
     return "Hello, Tribe!"
@@ -81,3 +82,7 @@ def calculate_salary():
     print(calculator.expected_salary)
 
     return render_template("results.html", output=calculator.expected_salary)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

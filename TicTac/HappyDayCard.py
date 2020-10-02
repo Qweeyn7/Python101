@@ -13,7 +13,7 @@ def demo(screen):
             screen,
             FigletText("Father's    Day!", font='big'),
             int(screen.height / 4 + 5)),
-        Stars(screen, 400)
+        Stars(screen, 400)import speech_recognition as sr
     }
     screen.play([Scene(effects, 700)])
 

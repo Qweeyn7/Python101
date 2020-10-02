@@ -6,7 +6,8 @@ time_Dict = {"Kim": ["8:00 am", "11:00 am", "12:00 pm"],
 day_Dict = dict(Sunday=None, Monday=["Kim", "Dee"], Tuesday=["Jane"], Wednesday=["Fran", "Dee"],
                 Thursday=["Dee", "Jane"], Friday=["Jane"], Saturday=["Fran", "Jane", "Kim"])
 
-possible_prices = {"New Locs": 300, "Retwist": 150, "Faux Locs": 200}
+possible_prices = {"Fresh Locs": 300, "Retwists": 150, "Goddess Locs": 200, "Boho Locs": 175, "Bollywood Locs": 125,
+                   "Loc Removal": 100}
 
 
 def calculate_services_price(day_of_appointment,

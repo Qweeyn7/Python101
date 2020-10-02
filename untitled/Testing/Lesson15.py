@@ -19,7 +19,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def appointment_form():
-    return render_template("index.html")
+    return render_template("EbG_index.html")
 
 
 @app.route('/schedule_app', methods=['POST'])
@@ -36,7 +36,7 @@ def schedule_app():
                                                                               time_of_appointment,
                                                                               service_type)
 
-        return render_template("appointmentDetails.html",
+        return render_template("NewAppointmentDetails.html",
                                output=scheduler.calculate_services)
 
 
